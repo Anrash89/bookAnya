@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Интерактивная книга с объёмным перелистыванием. Самостоятельная HTML-заготовка для ваших историй.">
+<title>Аня, Илья и медведь со сгущёнкой — интерактивная книга</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='3' width='23' height='27' rx='2' fill='%231c3443'/%3E%3Cpath d='M10 3v27M15 11h8M15 16h8' stroke='%23d0ad71'/%3E%3C/svg%3E">
+<style>
+html,body{margin:0;min-height:100%;background:#101b22}body{font-family:Arial,sans-serif}story-book{display:block}story-book:not(:defined){visibility:hidden}
+</style>
+</head>
+<body>
+<!-- ═══════════════════════════════════════════════════════════════════════
+  ВАША КНИГА. Меняйте только этот блок <story-book>…</story-book>.
+  title = название, author = автор, subtitle = подпись на обложке.
+  Каждый <section> — ОДНА страница. Добавляйте сколько угодно секций.
+  Используйте <h2>, <p>, <blockquote>, <figure><img><figcaption>.
+  Картинка: <img src="images/photo.jpg" alt="Описание картинки">
+  Положите папку images рядом с этим файлом. Ссылки https тоже работают.
+  class="chapter" — титульная страница; class="photo" — страница с фото.
+  Каждый section — отдельный лист. Текст автоматически подстраивается под высоту страницы,
+  поэтому книгу можно листать, не прокручивая содержимое внутри листа.
+  Если вставляете чужой HTML, сначала очистите его от скриптов и обработчиков.
+  ═══════════════════════════════════════════════════════════════════════ -->
+<story-book title="Аня, Илья и медведь со сгущёнкой" author="Для Ани" subtitle="Сказка о дружбе, которая умеет находить дорогу домой">
+  <section class="chapter">
+    <span class="eyebrow">Маленькая сказка</span>
+    <h2>Аня, Илья<br>и медведь<br>со сгущёнкой</h2>
+    <div class="rule"></div>
+    <p class="italic">История о том, что самое важное иногда приходит из книги.</p>
+    <span class="small-bottom">Листайте стрелками или свайпом</span>
+  </section>
+  <section>
+    <span class="eyebrow">Глава первая · Вечер</span>
+    <h2>Когда дом<br>засыпает</h2>
+    <p class="dropcap">Аня любила тот час, когда в доме выключали свет. За окном темнел сад, чайник переставал ворчать, а на подоконнике зажигалась круглая луна.</p>
+    <p>В такие минуты Аня открывала бумажную книгу. Не планшет, не телефон - настоящую книгу, которая пахла пылью, клеем и приключениями.</p>
+  </section>
+  <section>
+    <span class="eyebrow">Секрет № 1</span>
+    <h2>Плюшевый<br>дежурный</h2>
+    <p>Рядом с ней всегда лежал плюшевый медведь. Аня спала с ним с восьми лет и до сих пор не собиралась прекращать.</p>
+    <p>Медведь был старенький, с одним слегка примятым ухом. Зато он умел хранить тайны и очень выразительно смотреть на тех, кто съел последнюю конфету.</p>
+    <blockquote>«Я не храплю, - думала Аня. - Это он тренируется быть лесом».</blockquote>
+  </section>
+  <section class="art-page">
+    <span class="eyebrow">Место встречи</span>
+    <div class="abstract-art" role="img" aria-label="Синие сумерки, круглая луна и золотые огни"><div></div><i></i></div>
+    <p class="caption">01 / Вечер умеет открывать тайные двери</p>
+    <p>В ту ночь луна легла на пол серебряной дорожкой.</p>
+  </section>
+  <section>
+    <span class="eyebrow">Глава вторая · Двор</span>
+    <h2>Качели,<br>которые ждали</h2>
+    <p>Аня вышла в сад. Качели у старой яблони тихонько покачивались сами по себе, хотя ветра не было.</p>
+    <p>На сиденье лежал лист бумаги. На нём было написано всего два слова: «Приходи одна».</p>
+    <p>Аня посмотрела на медведя. Тот, конечно, ничего не сказал. Но его примятое ухо вдруг встало торчком.</p>
+  </section>
+  <section>
+    <span class="eyebrow">У пруда</span>
+    <h2>Лебединый<br>шёпот</h2>
+    <p>Тропинка привела её к пруду. По воде скользили два белых лебедя, похожие на маленькие корабли.</p>
+    <p>Один лебедь кивнул на дальний берег. Там, под ивой, стоял мальчик в синем свитере. Он держал в руках бумажную лодочку.</p>
+    <p>«Привет, - сказал он. - Я Илья. Ты опоздала ровно на одну луну».</p>
+  </section>
+  <section class="art-page">
+    <span class="eyebrow">Небо тоже подслушивает</span>
+    <div class="abstract-art" role="img" aria-label="Облака в форме смешных животных над прудом"><div></div><i></i></div>
+    <p class="caption">02 / Облако-кот и облако-слон следили за разговором</p>
+    <p>Над прудом плыли облака, похожие то на кота, то на сонного слона.</p>
+  </section>
+  <section>
+    <span class="eyebrow">Знакомство</span>
+    <h2>Илья знал<br>короткую дорогу</h2>
+    <p>Илья показал на лодочку. Внутри лежала крошечная карта, нарисованная чернилами.</p>
+    <p>«Она ведёт в место, где потерянные истории ищут хозяев. Но одной туда нельзя».</p>
+    <p>«А с плюшевым медведем можно?» - спросила Аня.</p>
+    <p>«С медведем можно куда угодно. Особенно если он умеет молчать».</p>
+  </section>
+  <section>
+    <span class="eyebrow">Лес из страниц</span>
+    <h2>Шаг за шагом</h2>
+    <p>Они пошли вдоль пруда. Деревья становились тонкими, как буквы, а листья шуршали целыми предложениями.</p>
+    <p>Аня заметила, что на каждой ветке висит закладка. На одной было написано «смелость», на другой - «ещё пять минут», а на третьей - «не забыть пирог».</p>
+    <blockquote>«Хорошая карта, - сказала Аня. - Здесь даже напоминания выглядят как приключение».</blockquote>
+  </section>
+  <section class="art-page">
+    <span class="eyebrow">Неожиданный сосед</span>
+    <div class="abstract-art" role="img" aria-label="Добрый медведь у лесной полянки и банка сгущёнки"><div></div><i></i></div>
+    <p class="caption">03 / В лесу жил медведь, который любил сгущёнку</p>
+    <p>Из-за папоротника донёсся вежливый бас: «Кто-нибудь случайно не несёт сгущёнку?»</p>
+  </section>
+  <section>
+    <span class="eyebrow">Добрый лесной медведь</span>
+    <h2>Угощение<br>по расписанию</h2>
+    <p>На полянке сидел настоящий медведь. Он был большой, лохматый и совершенно добрый. Перед ним стояла пустая банка.</p>
+    <p>Аня достала из кармана бутерброд. Медведь понюхал его и покачал головой.</p>
+    <p>«Спасибо, но я мечтаю о сгущёнке. От неё у меня даже мысли становятся кремовыми».</p>
+    <p>Илья нашёл в траве серебряную банку. Медведь от счастья чихнул так, что с дерева упала одна закладка.</p>
+  </section>
+  <section>
+    <span class="eyebrow">Тайная дверь</span>
+    <h2>Три вопроса<br>для смелых</h2>
+    <p>За поляной стояла дверь без стены. На ней светились три вопроса.</p>
+    <p>«Чего ты боишься? Кого ждёшь? Что возьмёшь с собой?»</p>
+    <p>Аня честно ответила: «Боюсь остаться одна. Жду, когда станет не страшно. С собой возьму тех, кто рядом».</p>
+    <p>Дверь открылась. Медведь взял банку сгущёнки, Илья - карту, а Аня - своего плюшевого друга.</p>
+  </section>
+  <section class="chapter quote-page">
+    <span class="eyebrow">Пауза перед чудом</span>
+    <div class="quote-mark">“</div>
+    <h2>Иногда<br>храбрость -<br>это просто<br><em>не уходить.</em></h2>
+    <div class="rule"></div>
+    <p class="italic">И позволить кому-то идти рядом.</p>
+  </section>
+  <section>
+    <span class="eyebrow">За дверью</span>
+    <h2>Комната<br>потерянных историй</h2>
+    <p>За дверью была огромная библиотека. Книги летали под потолком, спорили о концовках и иногда чихали пылью.</p>
+    <p>В центре стояла пустая полка. На ней должно было появиться имя Ани.</p>
+    <p>«У каждой истории есть место, - сказал Илья. - Даже у той, которая ещё не решилась начаться».</p>
+  </section>
+  <section>
+    <span class="eyebrow">Странная деталь</span>
+    <h2>Почему никто<br>не видит Илью?</h2>
+    <p>Аня вдруг заметила: книги приветствовали медведя, лебеди - её, а Илья отражался только в лакированных обложках.</p>
+    <p>«Ты давно здесь живёшь?» - спросила она.</p>
+    <p>Илья улыбнулся. «С тех пор, как тебе понадобился кто-то, кто знает короткую дорогу».</p>
+  </section>
+  <section class="art-page">
+    <span class="eyebrow">Самая тихая страница</span>
+    <div class="abstract-art" role="img" aria-label="Светлая пустая страница с тонкой золотой линией"><div></div><i></i></div>
+    <p class="caption">04 / В пустоте иногда прячется ответ</p>
+    <p>На полке не было зеркала. Но Аня всё равно поняла.</p>
+  </section>
+  <section>
+    <span class="eyebrow">Разгадка</span>
+    <h2>Илья был<br>из книги</h2>
+    <p>«Ты придумал себя?» - тихо спросила Аня.</p>
+    <p>«Не совсем. Ты придумала меня, когда читала в одиночестве и хотела, чтобы кто-то сказал: “Я рядом”. Я просто дождался, пока ты меня услышишь».</p>
+    <p>Аня посмотрела на его синий свитер и рассмеялась. Обижаться на воображаемого друга было бы странно. Особенно если он знает дорогу домой.</p>
+  </section>
+  <section>
+    <span class="eyebrow">Самое важное</span>
+    <h2>Воображаемый<br>не значит ненастоящий</h2>
+    <p>Илья не исчез. Он стал чуть прозрачнее, зато улыбка у него стала совсем настоящей.</p>
+    <p>«Ты можешь возвращаться, когда захочешь», - сказала Аня.</p>
+    <p>«Я буду в каждой хорошей главе. И в каждой банке сгущёнки, которую медведь не успел съесть».</p>
+  </section>
+  <section>
+    <span class="eyebrow">Дорога назад</span>
+    <h2>Пруд помнил<br>их шаги</h2>
+    <p>Они вернулись к воде до рассвета. Лебеди проплыли мимо, качели у яблони тихонько скрипнули, а облако-кот зевнул.</p>
+    <p>Настоящий медведь помахал лапой и спрятал банку за спину. «На всякий случай», - сказал он.</p>
+    <p>Илья отдал Ане карту. Теперь на ней появилась новая точка: «Здесь всегда ждут».</p>
+  </section>
+  <section class="art-page">
+    <span class="eyebrow">До следующей встречи</span>
+    <div class="abstract-art" role="img" aria-label="Лунная дорожка к дому и золотая звезда"><div></div><i></i></div>
+    <p class="caption">05 / Самый короткий путь ведёт к тем, кто дорог</p>
+    <p>Аня обняла плюшевого медведя и на минуту закрыла глаза.</p>
+  </section>
+  <section>
+    <span class="eyebrow">Последняя глава</span>
+    <h2>Книга<br>осталась открытой</h2>
+    <p>Утром Аня проснулась в своей кровати. На стуле лежала бумажная лодочка. В ней - крошечная записка: «Не забудь поздороваться с луной».</p>
+    <p>Плюшевый медведь лежал рядом, как обычно. Только на его ухе блестела капля сгущёнки.</p>
+    <p>Аня улыбнулась, открыла новую страницу и написала: «Илья, я знаю, где тебя искать».</p>
+  </section>
+  <section class="chapter">
+    <span class="eyebrow">Конец первой прогулки</span>
+    <h2>А дальше<br><em>будет ещё.</em></h2>
+    <div class="rule"></div>
+    <p>Потому что хорошие друзья не заканчиваются на последней странице.</p>
+    <span class="small-bottom">Спасибо, что листали эту книгу</span>
+  </section>
+</story-book>
+<!-- КОНЕЦ ВАШЕГО ТЕКСТА. Движок ниже можно оставить без изменений. -->
+
+<script>
+/*
+  PAPER / Автономный компонент, без CDN, npm и сторонних библиотек.
+  Встраивание: перенесите <story-book> и этот <script> на свою страницу.
+  Стили изолированы через Shadow DOM. Можно создать несколько книг.
+  Или вставьте файл через iframe: <iframe src="book.html" style="width:100%;height:850px;border:0"></iframe>
+  API: document.querySelector('story-book').next() / .prev() / .closeBook()
+  Цвета: --cover, --gold, --paper. Скорость: this.duration (мс).
+*/
+class StoryBook extends HTMLElement {
+  connectedCallback(){
+    if(this.shadowRoot)return;
+    this.attachShadow({mode:'open'});
+    this.duration=950; this.step=0; this.page=0; this.busy=false; this.sound=false;
+    this.mobile=matchMedia('(max-width: 700px)').matches;
+    this.reduced=matchMedia('(prefers-reduced-motion: reduce)');
+    const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    this.bookTitle=escape(this.getAttribute('title')||'Ваша история');
+    this.author=escape(this.getAttribute('author')||'Имя автора');
+    const subtitle=escape(this.getAttribute('subtitle')||'');
+    const cover=`<div class="cover-inner"><span class="cover-edition">Личная библиотека &nbsp; / &nbsp; 01</span><div class="cover-orbit" aria-hidden="true"><i></i><b>✦</b></div><div class="cover-title">${this.bookTitle}</div><div class="cover-line"></div><p class="cover-subtitle">${subtitle}</p><span class="cover-author">${this.author}</span></div>`;
+    const artNames=Array.from({length:27},(_,i)=>`art-${String(i+1).padStart(2,'0')}.webp`);
+    const sourceSections=[...this.children].filter(n=>n.tagName==='SECTION');
+    this.pages=[{html:cover,cover:true}];
+    sourceSections.forEach((s,i)=>{
+      const art=artNames[i];
+      this.pages.push({html:`<div class="running">${this.bookTitle}</div><div class="content ${escape(s.className)}" tabindex="0" aria-label="Содержимое страницы ${i+1}"><figure class="story-art"><img src="images/${art}" alt="Иллюстрация к странице ${i+1}"></figure>${s.innerHTML}</div><footer><span>${this.author}</span><span>${String(i+1).padStart(2,'0')}</span></footer>`});
+    });
+    for(let i=sourceSections.length;i<artNames.length;i++){
+      const n=i+1,art=artNames[i];
+      this.pages.push({html:`<div class="running">${this.bookTitle}</div><div class="content chapter" tabindex="0" aria-label="Иллюстрация к странице ${n}"><figure class="story-art"><img src="images/${art}" alt="Иллюстрация к странице ${n}"><figcaption>Ещё одна страница нашей ночной прогулки</figcaption></figure></div><footer><span>${this.author}</span><span>${String(n).padStart(2,'0')}</span></footer>`});
+    }
+    if(this.pages.length%2===0)this.pages.push({html:'<div class="content chapter"><span class="end-symbol">✦</span></div>'});
+    this.pages.push({html:`<div class="cover-inner back-inner"><span class="end-symbol">✦</span><p class="back-title">${this.bookTitle}</p><div class="cover-line"></div><span class="cover-author">${this.author}</span></div>`,cover:true});
+    this.count=this.pages.length/2;
+    this.shadowRoot.innerHTML=`<style>
+    :host{--cover:#173d49;--gold:#d9b77a;--paper:#f4eddf;display:block;color:#e9e3d8;font-family:Arial,Helvetica,sans-serif;color-scheme:dark}
+    *{box-sizing:border-box}button{font:inherit}button:focus-visible,.content:focus-visible{outline:2px solid var(--gold);outline-offset:5px}button{touch-action:manipulation}button:disabled{opacity:.24;cursor:default}button:not(:disabled){cursor:pointer}
+    .app{position:relative;isolation:isolate;min-height:850px;min-height:max(760px,100svh);overflow:hidden;background:radial-gradient(ellipse at 50% 43%,#35464c 0,#1d2d35 43%,#101b22 82%);padding:32px 40px 28px;display:flex;flex-direction:column}
+    .app:before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.1;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath fill='%23fff' filter='url(%23n)' opacity='.35' d='M0 0h180v180H0z'/%3E%3C/svg%3E");z-index:-1}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:2}.brand{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:2.7px;text-transform:uppercase}.brand-mark{color:var(--gold);font-family:Georgia,serif;font-size:32px;line-height:1}.top button{background:none;border:0;color:#b6c1c4;font-size:14px;padding:12px 0}.top button:hover{color:var(--gold)}
+    .stage{--pw:390px;--ph:550px;position:relative;width:100%;height:calc(var(--ph) + 70px);margin:auto;display:grid;place-items:center;perspective:2300px;touch-action:pan-y;user-select:none}
+    .desk-shadow{position:absolute;top:calc(50% + var(--ph)/2 - 6px);width:calc(var(--pw)*1.7);height:54px;background:#020b10;filter:blur(25px);border-radius:50%;opacity:.68;transition:width .9s}
+    .book{width:calc(var(--pw)*2);height:var(--ph);position:relative;transform-style:preserve-3d;transition:transform .95s cubic-bezier(.2,.7,.2,1);transform:translateX(calc(var(--pw)*-.5)) rotateZ(-3deg);filter:drop-shadow(0 18px 18px #020c1544)}
+    .book.open{transform:translateX(0) rotateZ(0)}.book.finished{transform:translateX(calc(var(--pw)*.5)) rotateZ(2deg)}
+    .leaf{position:absolute;left:50%;top:0;width:var(--pw);height:var(--ph);transform-origin:0 50%;transform-style:preserve-3d;will-change:transform}
+    .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;overflow:hidden;border-radius:2px 7px 7px 2px;background:var(--paper);color:#303b3d;box-shadow:inset -1px 0 0 #b2a58c,1px 2px 0 #c5bba7,2px 3px 0 #ece4d5,3px 4px 0 #9a9485;display:flex;flex-direction:column}
+    .face:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#53462d2b 0%,#695d4110 3%,transparent 13%,#fff2 85%,#6853330b);z-index:3}
+    .face.back{transform:rotateY(180deg);border-radius:7px 2px 2px 7px}.face.back:after{background:linear-gradient(270deg,#49382038 0%,#695d4110 4%,transparent 15%,#fff2 85%)}
+    .face .shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#241b0b99,transparent 55%);opacity:0;z-index:4}.face.back .shade{background:linear-gradient(270deg,#241b0b99,transparent 55%)}
+    .face.cover{background:var(--cover);color:var(--gold);border:1px solid #9c87464d;box-shadow:inset 5px 0 8px #001c2788,inset -1px 0 0 #f4d49a33,2px 3px 0 #16313b,4px 5px 0 #b0a17d,6px 6px 0 #173743}
+    .face.cover:before{content:'';position:absolute;inset:13px 13px 13px 20px;border:1px solid #d9b77a55;pointer-events:none}.face.cover:after{background:repeating-linear-gradient(0deg,#ffffff03 0,#ffffff03 1px,transparent 1px,transparent 3px),linear-gradient(90deg,#0005,transparent 3%,#ffffff09 4%,#0004 6%,transparent 10%)}
+    .cover-inner{height:100%;padding:38px 34px 34px 43px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}.cover-edition{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;opacity:.8}.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,3.3vw,46px);line-height:1.12;font-weight:400;text-shadow:0 1px 0 #fff3,0 -1px 0 #0007;max-width:310px;letter-spacing:-1.3px}.cover-subtitle{max-width:210px;font-family:Georgia,serif;font-size:15px;line-height:1.6;font-style:italic;color:#ddc89f;margin:0}.cover-author{margin-top:auto;font-size:11px;letter-spacing:2.7px;text-transform:uppercase}.cover-line{width:36px;height:1px;background:var(--gold);margin:22px auto;opacity:.6}
+    .cover-orbit{position:relative;display:grid;place-items:center;width:92px;height:92px;border:1px solid #c7aa6980;border-radius:50%;margin:32px auto 26px}.cover-orbit:before,.cover-orbit:after{content:'';position:absolute;inset:8px -12px;border:1px solid #c7aa6966;border-radius:50%;transform:rotate(55deg)}.cover-orbit:after{transform:rotate(-55deg)}.cover-orbit i{position:absolute;width:4px;height:4px;background:var(--gold);top:7px;left:13px;border-radius:50%}.cover-orbit b{font-size:38px;font-weight:normal}.back-inner{justify-content:center}.back-inner .cover-author{margin-top:26px}.back-title{font:italic 28px/1.3 Georgia,serif;max-width:240px}.end-symbol{font-size:38px;color:#b5965a}
+    .running{padding:23px 30px 12px;font-size:9px;letter-spacing:1.3px;text-transform:uppercase;color:#7b817a;border-bottom:1px solid #b1a98f40;margin:0 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .content{margin:0;padding:30px 35px 18px;flex:1;min-height:0;overflow:hidden;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.65;user-select:text;overscroll-behavior:contain;overflow-wrap:break-word}.content:focus:not(:focus-visible){outline:none}.content p{margin:0 0 15px}.eyebrow{display:block;font:10px/1.5 Arial,sans-serif;text-transform:uppercase;letter-spacing:1.6px;color:#8e754c;margin-bottom:20px}.content h2{font:normal 31px/1.14 Georgia,serif;letter-spacing:-.8px;margin:0 0 23px;color:#25424a}.content h3{font-size:22px;line-height:1.3}.content em,.italic{font-style:italic;color:#69736b}.dropcap:first-letter{float:left;font:62px/.9 Georgia,serif;padding:7px 7px 0 0;color:#8c7042}blockquote{margin:24px 0 0;border-left:2px solid #bda778;padding:0 0 0 18px;font-style:italic;font-size:17px;line-height:1.5;color:#7d6843}.chapter{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}.chapter h2{font-size:33px;line-height:1.25}.chapter p{font-size:17px}.rule{width:30px;height:1px;background:#a38c5f;margin:0 0 26px}.small-bottom{font:9px/1.5 Arial,sans-serif;letter-spacing:1.2px;text-transform:uppercase;margin-top:42px;color:#8c897c}.quote-page{background:#e9e5d7}.quote-page h2{font-size:37px}.quote-mark{font:75px/.7 Georgia,serif;color:#b59b69;margin:18px 0}.quote-page .eyebrow{margin-bottom:0}footer{display:flex;justify-content:space-between;margin:0 35px;padding:12px 0 18px;border-top:1px solid #b1a98f40;font:9px/1.3 Arial,sans-serif;text-transform:uppercase;letter-spacing:1px;color:#7c8179}
+    .content img{display:block;width:100%;height:auto;max-height:350px;object-fit:contain;border-radius:2px}.content figure{margin:0 0 20px}.content figcaption,.caption{font:10px/1.6 Arial,sans-serif;letter-spacing:.8px;color:#858271;margin-top:12px}.story-art{margin:0 0 15px!important}.story-art img{height:145px!important;max-height:145px!important;object-fit:cover!important;border-radius:5px!important;box-shadow:0 5px 14px #263b3d22}.story-art figcaption{text-align:center}.photo{padding:20px}.photo img{max-height:100%;object-fit:cover}.abstract-art{display:none}
+    .bottom{display:flex;flex-direction:column;align-items:center;gap:21px;z-index:2}.toolbar{display:flex;align-items:center;gap:18px;padding:8px;border:1px solid #9faeb32b;border-radius:50px;background:#101e2488;box-shadow:0 8px 30px #06101730;backdrop-filter:blur(15px)}.toolbar button{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:0;background:#ffffff08;color:#e6dcc5;font-size:22px;transition:background .2s,transform .2s}.toolbar button:hover:not(:disabled){background:#d9b77a22;transform:scale(1.06)}.status{min-width:138px;text-align:center;display:flex;flex-direction:column;gap:5px}.status strong{font-size:12px;font-weight:400;letter-spacing:.5px}.progress{height:2px;width:88px;margin:auto;background:#a7b8bd25}.progress span{display:block;height:100%;width:0;background:var(--gold);transition:width .6s}.toolbar .utility{width:34px;height:34px;font-size:16px}.divider{height:18px;width:1px;background:#ffffff19}.hint{font-size:12px;color:#9aaeb5;letter-spacing:.3px;text-align:center;margin:0}.hint kbd{font:12px Arial;border:1px solid #90a4ae40;border-radius:4px;padding:1px 5px;margin:0 2px}.open-cta{border:0;background:none;color:var(--gold);font-size:13px;letter-spacing:1px;padding:9px 18px;min-height:36px}.open-cta:hover{color:#ffe2aa}.footnote{position:absolute;bottom:35px;left:40px;color:#82959e;font:10px Arial;letter-spacing:2px;text-transform:uppercase}.mobile-book{display:none;position:relative;width:var(--pw);height:var(--ph);perspective:1800px;filter:drop-shadow(0 18px 18px #020c1566)}.mobile-book>.face{transform:none}.mobile-book .mobile-turn{transform-origin:left center;z-index:5;backface-visibility:hidden}
+    dialog{max-width:620px;width:calc(100% - 32px);max-height:85svh;background:#f4eddf;color:#283d44;border:1px solid #b9a578;border-radius:10px;padding:30px;line-height:1.65;box-shadow:0 30px 100px #0008}dialog::backdrop{background:#08151bbd;backdrop-filter:blur(6px)}dialog h2{font:30px Georgia;margin:0 0 22px}dialog p,dialog li{font-size:15px}dialog code{font-size:13px}dialog pre{background:#e4dfd2;overflow:auto;padding:15px;line-height:1.5}dialog .dismiss{float:right;background:transparent;border:0;font-size:25px;color:#28404a;padding:0 8px}dialog a{color:#235c72}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+    @media(min-width:701px) and (max-height:800px){.app{min-height:720px}.stage{--pw:340px;--ph:490px}.content{padding:24px 28px 12px;font-size:15px}.content h2{font-size:29px}.cover-orbit{margin:22px auto}.cover-title{font-size:38px}.cover-inner{padding-top:30px}}
+    @media(min-width:701px) and (max-width:920px){.stage{--pw:330px;--ph:490px}.content{padding:22px 25px 15px}.cover-title{font-size:36px}.cover-orbit{margin:20px auto}.cover-inner{padding-left:32px;padding-right:25px}.footnote{display:none}}
+    @media(max-width:700px){.app{padding:20px 16px 24px;min-height:800px;min-height:max(780px,100svh)}.brand{font-size:10px;letter-spacing:1.6px;gap:8px}.brand-mark{font-size:25px}.top button{font-size:12px}.stage{--pw:min(380px,calc(100vw - 44px));--ph:530px;height:580px;overflow:visible}.book{display:none}.mobile-book{display:block}.desk-shadow{width:var(--pw)}.cover-title{font-size:40px}.cover-inner{padding:34px 28px 30px 35px}.cover-orbit{margin:28px auto}.running{font-size:8px}.content{padding:25px 29px 15px;font-size:16px}.content h2{font-size:29px}.chapter h2{font-size:32px}.story-art{margin-bottom:10px!important}.story-art img{height:115px!important;max-height:115px!important}.toolbar{gap:12px}.toolbar button{width:42px;height:42px}.status{min-width:108px}.footnote{display:none}.bottom{gap:15px}.hint{font-size:11px}.hint kbd{display:none}.quote-page h2{font-size:34px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important;animation:none!important}}
+    </style><main class="app" tabindex="-1"><header class="top"><div class="brand"><span class="brand-mark">❧</span>Ателье историй</div><button class="help" type="button">Как добавить рассказ ↗</button></header><div class="stage" aria-label="Интерактивная книга"><div class="desk-shadow"></div><div class="book"></div><div class="mobile-book"></div></div><div class="bottom"><button class="open-cta" type="button">Открыть книгу &nbsp; ↗</button><div class="toolbar" role="group" aria-label="Управление книгой"><button class="prev" aria-label="Предыдущая страница">←</button><div class="status"><strong></strong><div class="progress"><span></span></div></div><button class="next" aria-label="Следующая страница">→</button><span class="divider"></span><button class="utility sound" aria-label="Включить звук страниц" aria-pressed="false" title="Звук страниц">♫</button><button class="utility reset" aria-label="Вернуться к обложке" title="К обложке">↺</button></div><p class="hint">Потяните край страницы · или используйте <kbd>←</kbd> <kbd>→</kbd></p></div><span class="footnote">Paper / Interactive edition</span><span class="sr" aria-live="polite"></span><dialog><button class="dismiss" aria-label="Закрыть инструкцию">×</button><h2>Ваша следующая история</h2><p>Откройте <b>book.html</b> в любом редакторе кода. В начале файла найдите блок <code>&lt;story-book&gt;</code>: название и автор задаются его атрибутами.</p><pre>&lt;story-book title="Моя история" author="Ваше имя"&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Глава первая&lt;/h2&gt;
+    &lt;p&gt;Однажды вечером…&lt;/p&gt;
+  &lt;/section&gt;
+  &lt;section class="photo"&gt;
+    &lt;figure&gt;
+      &lt;img src="images/photo.jpg" alt="У моря"&gt;
+      &lt;figcaption&gt;Место, где всё началось&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/section&gt;
+&lt;/story-book&gt;</pre><p>Каждая секция — отдельная страница. Копируйте секции, меняйте текст, удаляйте примеры. Обложка и номера создаются автоматически. Текст помещается в лист автоматически, поэтому внутри страницы не нужно прокручивать: если раздел длиннее, лучше продолжить его на следующем section.</p><p>Картинки положите в папку <code>images</code> рядом с HTML. Можно использовать и прямой адрес картинки. На компьютере книга открывается разворотами, на телефоне — по одной странице.</p><p>Чтобы встроить всю книгу на сайт:</p><pre>&lt;iframe src="book.html" title="Моя книга"
+  style="width:100%;height:850px;border:0"&gt;
+&lt;/iframe&gt;</pre><p>Работает без интернета, если картинки находятся рядом с файлом. Никакой установки: просто откройте HTML в браузере.</p></dialog></main>`;
+    this.$=s=>this.shadowRoot.querySelector(s);this.book=this.$('.book');this.stage=this.$('.stage');this.leaves=[];
+    const face=(p,side)=>`<div class="face ${side} ${p.cover?'cover':''}">${p.html}<div class="shade"></div></div>`;
+    this.faceHTML=face;
+    for(let i=0;i<this.count;i++){const leaf=document.createElement('div');leaf.className='leaf';leaf.innerHTML=face(this.pages[i*2],'front')+face(this.pages[i*2+1],'back');this.book.append(leaf);this.leaves.push(leaf)}
+    this.$('.next').onclick=()=>this.next();this.$('.prev').onclick=()=>this.prev();this.$('.reset').onclick=()=>this.closeBook();this.$('.open-cta').onclick=()=>this.atEnd()?this.closeBook():this.next();
+    this.$('.sound').onclick=()=>{this.sound=!this.sound;this.$('.sound').setAttribute('aria-pressed',this.sound);this.$('.sound').setAttribute('aria-label',this.sound?'Выключить звук страниц':'Включить звук страниц');this.$('.sound').style.color=this.sound?'var(--gold)':'';if(this.sound)this.playSound()};
+    const dialog=this.$('dialog');this.$('.help').onclick=()=>dialog.showModal();this.$('.dismiss').onclick=()=>dialog.close();dialog.onclick=e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}};
+    this.shadowRoot.addEventListener('keydown',e=>{if(dialog.open||e.altKey||e.ctrlKey||e.metaKey)return;if(e.key==='ArrowRight'){e.preventDefault();this.next()}if(e.key==='ArrowLeft'){e.preventDefault();this.prev()}if(e.key==='Home'){e.preventDefault();this.closeBook()}});
+    this.addEventListener('pointerdown',()=>this.$('.app').focus({preventScroll:true}));
+    this.stage.addEventListener('pointerdown',e=>this.pointerDown(e));this.stage.addEventListener('pointermove',e=>this.pointerMove(e));this.stage.addEventListener('pointerup',e=>this.pointerUp(e));this.stage.addEventListener('pointercancel',()=>this.cancelDrag());
+    this.mq=matchMedia('(max-width:700px)');this.onResize=()=>{if(this.busy||this.drag){this.pendingResize=true;return}this.applyMode()};this.mq.addEventListener('change',this.onResize);
+    this.update();this.fitPages();this.$('.app').focus({preventScroll:true});
+  }
+  disconnectedCallback(){this.mq?.removeEventListener('change',this.onResize);this.audio?.close().catch(()=>{})}
+  applyMode(){const m=this.mq.matches;if(m===this.mobile)return;if(m)this.page=this.step===0?0:Math.min(this.pages.length-1,this.step*2-1);else this.step=Math.min(this.count,Math.floor((this.page+1)/2));this.mobile=m;this.update()}
+  atEnd(){return this.mobile?this.page===this.pages.length-1:this.step===this.count}
+  atStart(){return this.mobile?this.page===0:this.step===0}
+  fitPages(){
+    this.shadowRoot.querySelectorAll('.content').forEach(el=>{
+      el.style.overflow='hidden';el.style.zoom='';el.style.fontSize='';el.style.lineHeight='';
+      let size=parseFloat(getComputedStyle(el).fontSize)||16;let tries=0;
+      while(el.scrollHeight>el.clientHeight+1&&size>11&&tries++<16){size-=.5;el.style.fontSize=`${size}px`;el.style.lineHeight=`${Math.max(1.35,size*1.55)}px`}
+      if(el.scrollHeight>el.clientHeight+1){const ratio=Math.max(.78,(el.clientHeight-2)/el.scrollHeight);el.style.zoom=ratio.toFixed(3)}
+    });
+  }
+  update(){
+    this.book.classList.toggle('open',this.step>0&&this.step<this.count);this.book.classList.toggle('finished',this.step===this.count);
+    this.leaves.forEach((leaf,i)=>{leaf.style.transform=`rotateY(${i<this.step?-180:0}deg)`;leaf.style.zIndex=i<this.step?i+1:this.count-i;const frontVisible=!this.mobile&&i===this.step,backVisible=!this.mobile&&i===this.step-1;leaf.children[0].inert=!frontVisible;leaf.children[0].setAttribute('aria-hidden',!frontVisible);leaf.children[1].inert=!backVisible;leaf.children[1].setAttribute('aria-hidden',!backVisible);leaf.querySelectorAll('.shade').forEach(s=>s.style.opacity=0)});
+    this.$('.mobile-book').innerHTML=this.mobile?this.faceHTML(this.pages[this.page],'single'):'';
+    const contentCount=this.pages.length-2;
+    const label=this.atStart()?'Обложка':this.atEnd()?'Конец истории':this.mobile?`${this.page} / ${contentCount}`:`${this.step*2-1} — ${Math.min(this.step*2,contentCount)} / ${contentCount}`;
+    this.$('.status strong').textContent=label;this.$('.sr').textContent=label;this.$('.progress span').style.width=`${(this.mobile?this.page/(this.pages.length-1):this.step/this.count)*100}%`;
+    this.$('.prev').disabled=this.atStart();this.$('.next').disabled=this.atEnd();this.$('.reset').disabled=this.atStart();
+    this.$('.open-cta').style.visibility=this.atStart()||this.atEnd()?'visible':'hidden';this.$('.open-cta').textContent=this.atEnd()?'Прочитать ещё раз ↺':'Открыть книгу ↗';this.$('.hint').innerHTML=this.mobile?'Листайте свайпом или стрелками':'Потяните край страницы · или используйте <kbd>←</kbd> <kbd>→</kbd>';
+    requestAnimationFrame(()=>this.fitPages());
+    if(this.pendingResize){this.pendingResize=false;this.applyMode()}
+  }
+  next(){this.turn(1)}prev(){this.turn(-1)}
+  async turn(direction,start=0,commit=true){
+    if(this.busy||(direction===1&&this.atEnd())||(direction===-1&&this.atStart()))return;
+    this.busy=true;if(commit)this.playSound();
+    if(this.mobile){await this.turnMobile(direction,commit);this.busy=false;this.update();return}
+    const index=direction>0?this.step:this.step-1;const leaf=this.leaves[index];leaf.style.zIndex=this.count+3;
+    const from=direction>0?-180*start:-180+180*start;const to=commit?(direction>0?-180:0):(direction>0?0:-180);
+    if(commit){const target=this.step+direction;this.book.classList.toggle('open',target>0&&target<this.count);this.book.classList.toggle('finished',target===this.count)}
+    await this.animateLeaf(leaf,from,to,Math.max(180,this.duration*Math.abs(to-from)/180));
+    if(commit)this.step+=direction;this.busy=false;this.update();
+  }
+  animateLeaf(leaf,from,to,duration){return new Promise(resolve=>{if(this.reduced.matches){leaf.style.transform=`rotateY(${to}deg)`;resolve();return}const started=performance.now();const shades=leaf.querySelectorAll('.shade');const tick=now=>{const t=Math.min(1,(now-started)/duration);const ease=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;const angle=from+(to-from)*ease;leaf.style.transform=`rotateY(${angle}deg)`;shades.forEach(s=>s.style.opacity=Math.sin(Math.abs(angle)*Math.PI/180)*.55);if(t<1)requestAnimationFrame(tick);else resolve()};requestAnimationFrame(tick)})}
+  async turnMobile(d,commit){if(!commit)return;const container=this.$('.mobile-book'),target=this.page+d;const current=container.firstElementChild;let overlay;
+    if(d>0){container.insertAdjacentHTML('afterbegin',this.faceHTML(this.pages[target],'single'));overlay=current}else{container.insertAdjacentHTML('beforeend',this.faceHTML(this.pages[target],'single'));overlay=container.lastElementChild}
+    overlay.classList.add('mobile-turn');const from=d>0?0:-110,to=d>0?-110:0;overlay.style.transform=`rotateY(${from}deg)`;
+    await this.animateLeaf(overlay,from,to,this.duration*.72);this.page=target;
+  }
+  async closeBook(){if(this.busy||this.atStart())return;this.busy=true;this.playSound();const visual=this.mobile?this.$('.mobile-book'):this.book;
+    if(!this.reduced.matches){await visual.animate([{opacity:1,transform:visual.style.transform||getComputedStyle(visual).transform},{opacity:0,transform:'translateY(22px) scale(.97)'}],{duration:230,easing:'ease-in',fill:'none'}).finished.catch(()=>{})}
+    this.step=0;this.page=0;this.busy=false;this.update();if(!this.reduced.matches)visual.animate([{opacity:0},{opacity:1}],{duration:450});
+  }
+  pointerDown(e){
+    if(this.busy||e.button!==0||e.target.closest('button,a'))return;
+    const r=(this.mobile?this.$('.mobile-book'):this.book).getBoundingClientRect();const pw=r.width/(this.mobile?1:2);let direction=0;
+    if(this.mobile){if(e.clientX>=r.left&&e.clientX<=r.right)this.drag={x:e.clientX,y:e.clientY,id:e.pointerId,mobile:true,moved:false};return}
+    if(e.clientX>r.right-pw*.3&&!this.atEnd())direction=1;
+    if(e.clientX<r.left+pw*.3&&!this.atStart())direction=-1;
+    if(this.atStart()&&e.clientX>r.left+pw)direction=1;
+    if(!direction)return;
+    this.drag={x:e.clientX,y:e.clientY,id:e.pointerId,direction,progress:0,width:pw,moved:false};
+  }
+  pointerMove(e){const d=this.drag;if(!d||d.id!==e.pointerId)return;const dx=e.clientX-d.x,dy=e.clientY-d.y;if(!d.moved&&Math.abs(dy)>Math.abs(dx)&&Math.abs(dy)>9){this.drag=null;return}if(Math.abs(dx)<7&&!d.moved)return;d.moved=true;if(!this.stage.hasPointerCapture(e.pointerId))this.stage.setPointerCapture(e.pointerId);if(d.mobile)return;d.progress=Math.max(0,Math.min(1,-dx*d.direction/(d.width*1.4)));const leaf=this.leaves[d.direction>0?this.step:this.step-1];leaf.style.zIndex=this.count+3;const a=d.direction>0?-180*d.progress:-180+180*d.progress;leaf.style.transform=`rotateY(${a}deg)`;leaf.querySelectorAll('.shade').forEach(s=>s.style.opacity=Math.sin(Math.abs(a)*Math.PI/180)*.55)}
+  pointerUp(e){const d=this.drag;if(!d)return;this.drag=null;if(this.stage.hasPointerCapture(e.pointerId))this.stage.releasePointerCapture(e.pointerId);if(d.mobile){const dx=e.clientX-d.x;if(Math.abs(dx)>35&&Math.abs(dx)>Math.abs(e.clientY-d.y))this.turn(dx<0?1:-1);else if(!d.moved&&this.atStart())this.next();return}this.turn(d.direction,d.progress,!d.moved||d.progress>.17)}
+  cancelDrag(){const d=this.drag;this.drag=null;if(d&&!d.mobile)this.turn(d.direction,d.progress,false)}
+  playSound(){if(!this.sound)return;try{const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)return;this.audio||=new Audio();this.audio.resume().catch(()=>{});const c=this.audio,buffer=c.createBuffer(1,c.sampleRate*.25,c.sampleRate),data=buffer.getChannelData(0);for(let i=0;i<data.length;i++)data[i]=(Math.random()*2-1);const source=c.createBufferSource(),filter=c.createBiquadFilter(),gain=c.createGain();source.buffer=buffer;filter.type='bandpass';filter.frequency.value=1300;filter.Q.value=.7;gain.gain.setValueAtTime(.001,c.currentTime);gain.gain.exponentialRampToValueAtTime(.045,c.currentTime+.055);gain.gain.exponentialRampToValueAtTime(.001,c.currentTime+.25);source.connect(filter);filter.connect(gain);gain.connect(c.destination);source.start();source.stop(c.currentTime+.26)}catch{}}
+}
+customElements.define('story-book',StoryBook);
+</script>
+</body>
+</html>
