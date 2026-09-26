@@ -191,7 +191,7 @@ class StoryBook extends HTMLElement {
   connectedCallback(){
     if(this.shadowRoot)return;
     this.attachShadow({mode:'open'});
-    this.duration=950; this.step=0; this.page=0; this.busy=false; this.sound=false;
+    this.duration=950; this.step=0; this.page=0; this.busy=false; this.sound=true;
     this.mobile=matchMedia('(max-width: 700px)').matches;
     this.reduced=matchMedia('(prefers-reduced-motion: reduce)');
     const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -202,13 +202,31 @@ class StoryBook extends HTMLElement {
     const artNames=Array.from({length:27},(_,i)=>`art-${String(i+1).padStart(2,'0')}.webp`);
     const sourceSections=[...this.children].filter(n=>n.tagName==='SECTION');
     this.pages=[{html:cover,cover:true}];
+    let pageNumber=0;
+    const pushPage=(body,cls,art,alt)=>{
+      pageNumber++;
+      const image=art?`<figure class="story-art"><img src="images/${art}" alt="${alt}"></figure>`:'';
+      this.pages.push({html:`<div class="running">${this.bookTitle}</div><div class="content ${escape(cls||'')}" tabindex="0" aria-label="Содержимое страницы ${pageNumber}">${image}${body}</div><footer><span>${this.author}</span><span>${String(pageNumber).padStart(2,'0')}</span></footer>`});
+    };
     sourceSections.forEach((s,i)=>{
-      const art=artNames[i];
-      this.pages.push({html:`<div class="running">${this.bookTitle}</div><div class="content ${escape(s.className)}" tabindex="0" aria-label="Содержимое страницы ${i+1}"><figure class="story-art"><img src="images/${art}" alt="Иллюстрация к странице ${i+1}"></figure>${s.innerHTML}</div><footer><span>${this.author}</span><span>${String(i+1).padStart(2,'0')}</span></footer>`});
+      const nodes=[...s.children];
+      let chunk=[],chars=0,first=true;
+      const flush=()=>{
+        if(!chunk.length)return;
+        pushPage(chunk.join(''),`${s.className||''}${first?' chapter-opener':' continuation'}`,first?artNames[i]:null,`Иллюстрация к главе ${i+1}`);
+        chunk=[];chars=0;first=false;
+      };
+      nodes.forEach(node=>{
+        const html=node.outerHTML||'';
+        const length=Math.max(1,(node.textContent||'').replace(/\s+/g,' ').trim().length);
+        const limit=first?220:520;
+        if(chunk.length&&chars+length>limit)flush();
+        chunk.push(html);chars+=length;
+      });
+      flush();
     });
     for(let i=sourceSections.length;i<artNames.length;i++){
-      const n=i+1,art=artNames[i];
-      this.pages.push({html:`<div class="running">${this.bookTitle}</div><div class="content chapter" tabindex="0" aria-label="Иллюстрация к странице ${n}"><figure class="story-art"><img src="images/${art}" alt="Иллюстрация к странице ${n}"><figcaption>Ещё одна страница нашей ночной прогулки</figcaption></figure></div><footer><span>${this.author}</span><span>${String(n).padStart(2,'0')}</span></footer>`});
+      pushPage('<div class="chapter-note">Эта иллюстрация хранит ещё один поворот нашей сказки.</div>','chapter chapter-opener',artNames[i],`Иллюстрация к главе ${i+1}`);
     }
     if(this.pages.length%2===0)this.pages.push({html:'<div class="content chapter"><span class="end-symbol">✦</span></div>'});
     this.pages.push({html:`<div class="cover-inner back-inner"><span class="end-symbol">✦</span><p class="back-title">${this.bookTitle}</p><div class="cover-line"></div><span class="cover-author">${this.author}</span></div>`,cover:true});
@@ -252,7 +270,7 @@ class StoryBook extends HTMLElement {
       &lt;figcaption&gt;Место, где всё началось&lt;/figcaption&gt;
     &lt;/figure&gt;
   &lt;/section&gt;
-&lt;/story-book&gt;</pre><p>Каждая секция — отдельная страница. Копируйте секции, меняйте текст, удаляйте примеры. Обложка и номера создаются автоматически. Текст помещается в лист автоматически, поэтому внутри страницы не нужно прокручивать: если раздел длиннее, лучше продолжить его на следующем section.</p><p>Картинки положите в папку <code>images</code> рядом с HTML. Можно использовать и прямой адрес картинки. На компьютере книга открывается разворотами, на телефоне — по одной странице.</p><p>Чтобы встроить всю книгу на сайт:</p><pre>&lt;iframe src="book.html" title="Моя книга"
+&lt;/story-book&gt;</pre><p>Каждая секция — отдельная глава: её иллюстрация появляется только в начале, а длинный текст автоматически продолжается на следующих листах. Внутри страницы прокрутки нет. Копируйте секции, меняйте текст, удаляйте примеры.</p><p>Картинки положите в папку <code>images</code> рядом с HTML. Можно использовать и прямой адрес картинки. На компьютере книга открывается разворотами, на телефоне — по одной странице.</p><p>Чтобы встроить всю книгу на сайт:</p><pre>&lt;iframe src="book.html" title="Моя книга"
   style="width:100%;height:850px;border:0"&gt;
 &lt;/iframe&gt;</pre><p>Работает без интернета, если картинки находятся рядом с файлом. Никакой установки: просто откройте HTML в браузере.</p></dialog></main>`;
     this.$=s=>this.shadowRoot.querySelector(s);this.book=this.$('.book');this.stage=this.$('.stage');this.leaves=[];
@@ -260,6 +278,7 @@ class StoryBook extends HTMLElement {
     this.faceHTML=face;
     for(let i=0;i<this.count;i++){const leaf=document.createElement('div');leaf.className='leaf';leaf.innerHTML=face(this.pages[i*2],'front')+face(this.pages[i*2+1],'back');this.book.append(leaf);this.leaves.push(leaf)}
     this.$('.next').onclick=()=>this.next();this.$('.prev').onclick=()=>this.prev();this.$('.reset').onclick=()=>this.closeBook();this.$('.open-cta').onclick=()=>this.atEnd()?this.closeBook():this.next();
+    this.$('.sound').setAttribute('aria-pressed','true');this.$('.sound').setAttribute('aria-label','Выключить звук страниц');this.$('.sound').style.color='var(--gold)';
     this.$('.sound').onclick=()=>{this.sound=!this.sound;this.$('.sound').setAttribute('aria-pressed',this.sound);this.$('.sound').setAttribute('aria-label',this.sound?'Выключить звук страниц':'Включить звук страниц');this.$('.sound').style.color=this.sound?'var(--gold)':'';if(this.sound)this.playSound()};
     const dialog=this.$('dialog');this.$('.help').onclick=()=>dialog.showModal();this.$('.dismiss').onclick=()=>dialog.close();dialog.onclick=e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}};
     this.shadowRoot.addEventListener('keydown',e=>{if(dialog.open||e.altKey||e.ctrlKey||e.metaKey)return;if(e.key==='ArrowRight'){e.preventDefault();this.next()}if(e.key==='ArrowLeft'){e.preventDefault();this.prev()}if(e.key==='Home'){e.preventDefault();this.closeBook()}});
