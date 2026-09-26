@@ -209,19 +209,32 @@ class StoryBook extends HTMLElement {
       this.pages.push({html:`<div class="running">${this.bookTitle}</div><div class="content ${escape(cls||'')}" tabindex="0" aria-label="Содержимое страницы ${pageNumber}">${image}${body}</div><footer><span>${this.author}</span><span>${String(pageNumber).padStart(2,'0')}</span></footer>`});
     };
     sourceSections.forEach((s,i)=>{
-      const nodes=[...s.children];
-      let chunk=[],chars=0,first=true;
+      const nodes=[...s.children].filter(n=>!n.matches('.abstract-art'));
+      const firstBodyIndex=nodes.findIndex(n=>['P','BLOCKQUOTE'].includes(n.tagName));
+      const headers=nodes.slice(0,firstBodyIndex<0?nodes.length:firstBodyIndex);
+      const bodies=nodes.slice(firstBodyIndex<0?nodes.length:firstBodyIndex);
+      let chunk=headers.map(n=>n.outerHTML||''),chars=0,first=true;
       const flush=()=>{
         if(!chunk.length)return;
         pushPage(chunk.join(''),`${s.className||''}${first?' chapter-opener':' continuation'}`,first?artNames[i]:null,`Иллюстрация к главе ${i+1}`);
         chunk=[];chars=0;first=false;
       };
-      nodes.forEach(node=>{
-        const html=node.outerHTML||'';
-        const length=Math.max(1,(node.textContent||'').replace(/\s+/g,' ').trim().length);
-        const limit=first?220:520;
-        if(chunk.length&&chars+length>limit)flush();
-        chunk.push(html);chars+=length;
+      const addTextNode=(node,text)=>{
+        const tag=node.tagName.toLowerCase();
+        const cls=node.className?` class="${escape(node.className)}"`:'';
+        chunk.push(`<${tag}${cls}>${text}</${tag}>`);
+      };
+      bodies.forEach(node=>{
+        const raw=(node.textContent||'').replace(/\s+/g,' ').trim();
+        if(!raw){chunk.push(node.outerHTML||'');return}
+        const words=raw.split(' ');let part='';
+        words.forEach(word=>{
+          const candidate=part?`${part} ${word}`:word;
+          const limit=first?90:330;
+          if(part&&chars+candidate.length>limit){addTextNode(node,part);chars+=part.length;flush();part=word}else part=candidate;
+        });
+        if(part){if(chars+part.length> (first?90:330) && chars)flush();addTextNode(node,part);chars+=part.length}
+        if(chars>=(first?70:280))flush();
       });
       flush();
     });
