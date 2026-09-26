@@ -1,0 +1,107 @@
+{
+  "method": "Built-in imagegen; one distinct illustration per chapter",
+  "style": "Use case illustration-story. One landscape 3:2 finished book illustration, NO TEXT, NO typography, NO panels. Cohesive handmade layered paper-cut silhouettes with matte gouache and subtle paper grain; lyrical European fairy tale art; deep midnight indigo and teal, antique golden light, cream, restrained rust. Characters mostly silhouettes or turned away, no detailed faces, absolutely no glossy 3D. Beautiful tactile objects, botanical cutout details, atmospheric theatrical depth. Consistent Anya: girl with long auburn braid, mustard cardigan/coat, dark teal skirt, brown boots; she carries a small worn brown teddy with a repaired ear. Boy: slender silhouette in dark blue coat and teal scarf, tousled hair, same age. Real bear: huge round friendly brown bear, tiny teal scarf, cream muzzle. The moon is a luminous cream disc, no cartoon face. ",
+  "continuity": "Moon absent from sky until chapter 19; Anya auburn braid mustard cardigan teal skirt; boy navy coat teal scarf; no bear in chapters 1-3 and 20. Faceless silhouettes or rear views. No printed text.",
+  "scenes": [
+    {
+      "page": 1,
+      "image": "images/01.webp",
+      "prompt": "Anya at her bedroom window with teddy and paper books, missing moon."
+    },
+    {
+      "page": 2,
+      "image": "images/02.webp",
+      "prompt": "Anya with teddy stands beside old wooden double swings under an oak, a mysterious boy silhouette sits on the second swing, a funny seal-shaped cloud above the moonless night park, welcoming magical scene, no fear."
+    },
+    {
+      "page": 3,
+      "image": "images/03.webp",
+      "prompt": "Anya and the boy at an ornamental pond, two elegant white swans facing Anya as if offended, one swan offers a luminous feather, teddy peeks from her cloth shoulder bag; ripples and reeds, empty moonless sky."
+    },
+    {
+      "page": 4,
+      "image": "images/04.webp",
+      "prompt": "Warm forest clearing: enormous kind round bear lovingly embraces three blue-and-cream condensed milk tins and a spoon, Anya with teddy listens amused, boy is a small quiet silhouette behind her; lantern, fern leaves, comic tenderness."
+    },
+    {
+      "page": 5,
+      "image": "images/05.webp",
+      "prompt": "Inside bear's beautiful cluttered tree-root pantry: Anya studies a glowing silver ring left by a cup next to a folded paper map, bear points with a sticky spoon, jars and blue cream milk tins stacked everywhere, teddy in bag. Boy near doorway. No moon in sky."
+    },
+    {
+      "page": 6,
+      "image": "images/06.webp",
+      "prompt": "Enchanted swing launch: Anya with teddy in satchel rides a wooden swing high into fluffy clouds shaped like a rabbit with long ears and a dachshund, boy on adjoining swing, bear below firmly pushing Anya's swing with paw, moonless night, playful diagonal composition."
+    },
+    {
+      "page": 7,
+      "image": "images/07.webp",
+      "prompt": "Anya walking across dense cloud shaped like a huge woolly sheep, holding teddy securely, boy nearby, a funny tiny cloud pig floating upward as the sheep sneezes, glowing white fleece and gold stars; atmospheric silhouettes with no visible facial features."
+    },
+    {
+      "page": 8,
+      "image": "images/08.webp",
+      "prompt": "Grand secret library inside a hollow oak crown suspended among clouds, bridges of wooden shelves, many beautiful real cloth-bound paper books, tiny spectacled owl librarian on desk, Anya and boy silhouettes at entrance, teddy under arm; amber bookish light."
+    },
+    {
+      "page": 9,
+      "image": "images/09.webp",
+      "prompt": "Library close scene: Anya with braid reaching for a slim handmade blue paper notebook on an immense shelf, owl pointing with feather, boy in shadow farther back, teddy peeking from satchel; tactile handmade papers and embossed botanical books, no lettering."
+    },
+    {
+      "page": 10,
+      "image": "images/10.webp",
+      "prompt": "Anya and boy cross a fragile bridge made from blank unlettered book pages spanning a starry chasm, she crouches to steady teddy at her feet; pages curl into lovely arches, destination a small lit desk; courage and wonder, not frightening."
+    },
+    {
+      "page": 11,
+      "image": "images/11.webp",
+      "prompt": "Comical library rooftop rescue: friendly enormous bear arrives inside a huge sheep cloud, holding two condensed milk tins, Anya beside torn blank paper bridge; bear uses tiny spoon to spread milk on a page seam as if glue, boy observing quietly; beautiful cream and gold textures."
+    },
+    {
+      "page": 12,
+      "image": "images/12.webp",
+      "prompt": "Dreamlike meadow growing from an open paper book: luminous full moon lies low tucked among giant folded cream pages like a sleepy guest under a paper blanket, Anya approaches holding teddy, bear keeps his milk spoon respectfully lowered, boy distant; warm quiet magical encounter."
+    },
+    {
+      "page": 13,
+      "image": "images/13.webp",
+      "prompt": "Anya seated at a wooden desk under giant leaves, opens her childhood handmade blue notebook with simple unlettered charcoal silhouette drawing of a boy wearing the same scarf, real boy standing quietly behind her, teddy on desk. Strong visual recognition moment, subtle poignant mood."
+    },
+    {
+      "page": 14,
+      "image": "images/14.webp",
+      "prompt": "Quiet intimate library window scene: Anya and imaginary boy sit on floor face to face, boy is a gentle translucent paper silhouette edged in warm light, Anya holds teddy; single warm shadow from Anya on floor, countless books, moonlike soft reflected light, comforting not sad."
+    },
+    {
+      "page": 15,
+      "image": "images/15.webp",
+      "prompt": "Close poetic scene of Anya's hands finding a small golden pencil hidden in the repaired ear seam of her worn brown plush teddy bear; tiny spool of thread and old blank paper notebook on table, girl's braid and mustard sleeve partially visible, magical quiet warmth."
+    },
+    {
+      "page": 16,
+      "image": "images/16.webp",
+      "prompt": "Anya writing with small pencil in a blank cream paper notebook under a desk lamp, handwritten marks must be abstract illegible strokes not actual text; a tiny drawn doorway rises into a real glowing doorway on the page; boy luminous silhouette at shoulder, teddy nearby, bear peeks from shelf."
+    },
+    {
+      "page": 17,
+      "image": "images/17.webp",
+      "prompt": "Anya and huge friendly bear carry a round luminous moon in a blanket sling through shallow pond water, two white swans help guide the cloth, teddy safely in satchel, boy silhouette on distant bank; silver reflections, funny careful teamwork."
+    },
+    {
+      "page": 18,
+      "image": "images/18.webp",
+      "prompt": "Old wooden swing holds the round glowing moon snugly in a blanket, Anya pushes with both hands and bear leans to help from the side; teddy strapped safely in Anya's bag, swans at pond edge, boy quiet silhouette near oak, fluffy animal clouds overhead, joyful preparation."
+    },
+    {
+      "page": 19,
+      "image": "images/19.webp",
+      "prompt": "Spectacular moon launch: glowing round moon sails gently from the swing into midnight sky over the pond, funny rabbit and dachshund clouds making room, Anya and teddy and friendly bear and swans small silhouettes below, boy a faint warm silhouette by swing; luminous sweeping storybook composition."
+    },
+    {
+      "page": 20,
+      "image": "images/20.webp",
+      "prompt": "Dawn in Anya's cozy attic bedroom, she sleeps embracing the old teddy with repaired ear, finished blue notebook open on bedside table, a small empty boy-shaped reading silhouette suggested softly in paper shadow not a ghost, moon setting outside arched window, a blue-and-cream condensed milk tin and enormous kind bear pawprint on outer windowsill; tender grounded happy ending."
+    }
+  ]
+}
